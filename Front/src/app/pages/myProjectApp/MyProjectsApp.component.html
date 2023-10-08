@@ -1,0 +1,77 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8" style="height: 500px"></div>
+<div class="container-fluid floating-div">
+<div class="row mt-5">
+  <div class="col-xl-12 mb-5 mb-xl-0">
+    <div class="card shadow">
+      <div class="card-header border-0">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="mb-0">My Projects Applications</h3>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Project</th>
+                <th scope="col">Budget</th>
+                <th scope="col">Status</th>
+                <th scope="col">Client</th>
+              
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let n of projectsApp">
+              <tr>
+                <td scope="row">
+                  <div class="media align-items-center">
+                    <a href="#" class="avatar rounded-circle mr-3">
+                      <img alt="Image placeholder" src="assets/img/theme/vue.jpg">
+                    </a>
+                    <div class="media-body">
+                      <span class="mb-0 text-sm">{{ n.title }}</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  {{ n.payment }} DT
+                </td>
+                <td>
+                  <span class="badge badge-dot mr-4">
+                    progress
+                  </span>
+                </td>
+                <td>
+                  <div class="avatar-group">
+                  
+                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
+                      <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
+                    </a>
+                  
+                  </div>
+                </td>
+                <td>
+                  <a  class="btn btn-sm btn-primary" (click)="cancel(n.id)">Cancel Postulation</a>      
+                </td>
+                <td class="text-right">
+                  <div ngbDropdown   placement="bottom-right">
+                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="#">Postuler</a>
+                      <a class="dropdown-item" href="#">Mettre dans favoris</a>
+                    </div>
+                  </div>
+                </td>
+              
+              </tr>
+          
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>

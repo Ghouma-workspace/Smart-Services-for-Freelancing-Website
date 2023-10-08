@@ -1,0 +1,86 @@
+<div class="header bg-gradient-danger py-7 py-lg-8">
+  <div class="container">
+  </div>
+  <div class="separator separator-bottom separator-skew zindex-100">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-transparent pb-5">
+          <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
+          <div class="btn-wrapper text-center">
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="../assets/img/icons/common/github.svg"></span>
+              <span class="btn-inner--text">Github</span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
+              <span class="btn-inner--text">Google</span>
+            </a>
+          </div>
+        </div>
+        <div class="card-body px-lg-5 py-lg-5">
+          <div class="text-center text-muted mb-4">
+            <small>Or sign in with credentials</small>
+          </div>
+          <!-- houuuuuuuuuuuuuuuuuuuuuuuuuuunii -->
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="form-group row">
+                <label for="user_name" class="col-md-4 col-form-label text-md-right">Username</label>
+                <div class="col-md-6">
+                  <input type="text" id="user_name" class="form-control" [formControlName]="'username'" name="user_name"
+                    required autofocus>
+                  <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">
+                    Please provide a valid username
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                <div class="col-md-6">
+                  <input type="password" id="password" class="form-control" [formControlName]="'password'"
+                    name="password" required>
+                  <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+                    Password cannot be empty
+                  </span>
+                </div>
+              </div>
+
+              <span class="col-md-6 offset-md-4">
+                <button type="submit" class="login btn btn-primary">
+                  Login
+                </button>
+                <br />
+                <br />
+                <span style="padding-left: 15px">New User? <a routerLink="/register">SIGN UP</a></span>
+              </span>
+              <div class="login-failed" *ngIf='this.isError'>
+                <p class="login-failed-text">Login Failed. Please check your credentials and try again.</p>
+              </div>
+              <div class="login-failed" [ngStyle]="{'background-color': 'green'}"
+                *ngIf="this.registerSuccessMessage.length > 0">
+                <p class="register-success-text">{{registerSuccessMessage}}</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-6">
+          <a href="javascript:void(0)" class="text-light"><small>Forgot password?</small></a>
+        </div>
+        <div class="col-6 text-right">
+          <a href="javascript:void(0)" class="text-light"><small>Create new account</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

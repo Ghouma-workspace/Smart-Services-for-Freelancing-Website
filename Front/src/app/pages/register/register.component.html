@@ -1,0 +1,127 @@
+<div class="header bg-gradient-danger py-7 py-lg-8">
+  <div class="separator separator-bottom separator-skew zindex-100">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <!-- Table -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-transparent pb-5">
+          <div class="text-muted text-center mt-2 mb-4"><small>Sign up with</small></div>
+          <div class="text-center">
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon mr-4">
+              <span class="btn-inner--icon"><img src="assets/img/icons/common/github.svg"></span>
+              <span class="btn-inner--text">Github</span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="assets/img/icons/common/google.svg"></span>
+              <span class="btn-inner--text">Google</span>
+            </a>
+          </div>
+        </div>
+        <div class="card-body px-lg-5 py-lg-5">
+          <div class="text-center text-muted mb-4">
+            <small>Or sign up with credentials</small>
+          </div>
+          <!-- houuuuuuuuuuuniiiiiiiiiiiiiiiii -->
+          <div class="card-body">
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+              <div class="form-group row">
+                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
+                  Address</label>
+                <div class="col-md-6">
+                  <input type="text" [formControlName]="'email'" id="email_address" class="form-control" name="email-address"
+                    required autofocus>
+                  <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+                    Please provide a valid email
+                  </span>
+                </div>
+              </div>
+          
+              <div class="form-group row">
+                <label class="col-md-4 col-form-label text-md-right">User Name</label>
+                <div class="col-md-6">
+                  <input type="text" [formControlName]="'username'" class="form-control" required autofocus>
+                  <span *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
+                    Please provide a valid username
+                  </span>
+                </div>
+              </div>
+          
+              <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                <div class="col-md-6">
+                  <input type="password" [formControlName]="'password'" id="password" class="form-control" name="password"
+                    required>
+                  <span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
+                    Please provide a valid Password
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="first_name" class="col-md-4 col-form-label text-md-right">First Name
+                  Address</label>
+                <div class="col-md-6">
+                  <input type="text" [formControlName]="'firstName'" id="first_name" class="form-control" name="first-name" required
+                    autofocus>
+                  <span *ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched">
+                    Please provide a valid First Name
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="last_name" class="col-md-4 col-form-label text-md-right">Last Name
+                  Address</label>
+                <div class="col-md-6">
+                  <input type="text" [formControlName]="'lastName'" id="last_name" class="form-control" name="last-name" required
+                    autofocus>
+                  <span *ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched">
+                    Please provide a valid Last Name
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="age" class="col-md-4 col-form-label text-md-right">Age
+                  </label>
+                <div class="col-md-6">
+                  <input type="text" [formControlName]="'age'" id="age" class="form-control" name="age" required
+                    autofocus>
+                  <span *ngIf="!signupForm.get('age').valid && signupForm.get('age').touched">
+                    Please provide a valid age
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="gender" class="col-md-4 col-form-label text-md-right">Gender</label>
+                <div class="col-md-6">
+                  <input type="text" [formControlName]="'gender'" id="gender" class="form-control" name="gender" required
+                    autofocus>
+                  <span *ngIf="!signupForm.get('gender').valid && signupForm.get('gender').touched">
+                    Please provide a gender
+                  </span>
+                </div>
+              </div>
+          
+              <span class="col-md-6 offset-md-4">
+                <button type="submit" class="sign-up btn btn-primary">
+                  Sign Up
+                </button>
+                <br />
+                <span style="padding-left: 15px">Existing user? <a routerLink="/login">Log In</a></span>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

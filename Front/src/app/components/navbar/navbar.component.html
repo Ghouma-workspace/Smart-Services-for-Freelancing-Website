@@ -1,0 +1,75 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" routerLinkActive="active"
+      [routerLink]="['/dashboard']">{{getTitle()}}</a>
+    <!-- Form -->
+
+    <!-- User -->
+    <ul class="navbar-nav align-items-center d-none d-md-flex">
+      <li *ngIf="isLoggedIn"  class="nav-item" ngbDropdown placement="bottom-right">
+        <a class="nav-link pr-0" role="button" ngbDropdownToggle>
+          <div class="media align-items-center">
+            <span class="avatar avatar-sm rounded-circle">
+              <img alt="Image placeholder" [src]="profilePicBase64">
+              <!-- nzidouh profile picture !!! -->
+            </span>
+            <div class="media-body ml-2 d-none d-lg-block">
+              <span class="mb-0 text-sm  font-weight-bold">{{username}}</span>
+            </div>
+          </div>
+        </a>
+        <div class="dropdown-menu-arrow dropdown-menu-right" ngbDropdownMenu>
+          <div class=" dropdown-header noti-title">
+            <h6 class="text-overflow m-0">Welcome!</h6>
+          </div>
+          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
+            <i class="ni ni-single-02"></i>
+            <span>My profile</span>
+          </a>
+          <a routerLinkActive="active" [routerLink]="['/client']" class="dropdown-item">
+            <i class="ni ni-calendar-grid-58"></i>
+            <span>Switch Profile</span>
+          </a>
+          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
+            <i class="ni ni-settings-gear-65"></i>
+            <span>Settings</span>
+          </a>
+          <a routerLinkActive="active" [routerLink]="['/my-projects-apps']" class="dropdown-item">
+            <i class="ni ni-calendar-grid-58"></i>
+            <span>My Postulations</span>
+          </a>
+          <a routerLinkActive="active" [routerLink]="['/my-projects-working']" class="dropdown-item">
+            <i class="ni ni-calendar-grid-58"></i>
+            <span>My Activity</span>
+          </a>
+          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
+            <i class="ni ni-support-16"></i>
+            <span>Support</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#!" (click)="logout()" class="dropdown-item">
+            <i class="ni ni-user-run"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn" >
+        <button routerLink="/login" type="button" class="btn btn-outline-warning">Login</button>
+      </li>
+      <li class="nav-item"> </li>
+      <li class="nav-item" *ngIf="!isLoggedIn" >
+        <button routerLink="/register" type="button" class="btn btn-outline-warning">Register</button>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div class="search-container">
+    <input #searchInput type="text" placeholder="Search...">
+    <button class="search-btn" (click)="search(searchInput.value)">Search</button>
+  </div>
+
+
+</nav>

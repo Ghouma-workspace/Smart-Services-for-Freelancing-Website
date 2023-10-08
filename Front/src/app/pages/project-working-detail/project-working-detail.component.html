@@ -1,0 +1,54 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8" style="height: 500px;">
+</div>
+<div class="floating-div">
+<div class="container">
+    <h1>{{project.title}}</h1>
+    <div class="project-details">
+        <div class="project-details-item">
+            <label>Domain:</label>
+            <p>Web Development</p>
+        </div>
+        <div class="project-details-item">
+            <label>Dates:</label>
+            <p>{{project.accdate}}</p>
+        </div>
+        <div class="project-details-item">
+            <label>Description:</label>
+            <p>{{project.description}}</p>
+        </div>
+        <div class="project-details-item">
+            <label>Payment:</label>
+            <p>{{project.payment}}</p>
+        </div>
+        <div *ngIf="!project.finished" class="project-details-item">
+            <div class="status">
+                <label>Current status:</label>
+                <span class="badge badge-info">Not Finished</span>
+            </div>
+        </div>
+    </div>
+    <div class="progress-wrapper">
+        <div class="progress-info">
+            <div class="progress-label">
+                <span>In Progress</span>
+            </div>
+            <div class="progress-percentage">
+                <span>60%</span>
+            </div>
+        </div>
+        <div class="">
+            <div class="input-slider-container">
+                <div id="test" class="input-slider"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <form>
+            <input class="col-8 " type="file" (change)="onFileSelected($event)" accept=".zip">
+            <button class="btn btn-warning" mat-button>Upload Project</button>
+        </form>
+        
+    </div>
+</div>
+</div>

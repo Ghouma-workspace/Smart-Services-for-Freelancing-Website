@@ -1,0 +1,76 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+</div>
+<div class="header-body card shadow">
+  <div class="container-fluid card-body">
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input #bio type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Bio">
+              </div>
+            </div>
+        </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea #xp class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Describe your professionel experience here ..."></textarea>
+
+                </div>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea #skill class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Describe your skillse here ..."></textarea>
+                </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea #ay class="form-control" id="exampleFormControlInput1" rows="3" placeholder="About you ..."></textarea>
+                </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                  <img [src]="photoUploaded" alt="Profile Picture" height="300">
+                  <br />
+                  Photo de profil: <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="" (change)="handleProfilePicFileInput($event)">
+                  </div>
+                </div>
+            </div>
+            <span *ngIf="test" style="color: red;"> Veulliez entrer une photo valide</span>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                  Photo de couverture: <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="" (change)="handleProfileCoverFileInput($event)">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="(+216)99 999 999">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+            <button type="button" class="btn btn-outline-primary" (click)="submitClick(bio,xp,skill,ay)" >Submit</button>
+          </div>
+        </div>
+      </div>
+        
+    </form>
+  </div>
+</div>

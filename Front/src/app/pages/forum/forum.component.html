@@ -1,0 +1,26 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8" style="height: 500px"></div>
+<div class="floating-div">
+
+  <div class="comments-section">
+    <h2>Welcome to our Forum</h2>
+    <ul class="comment-list">
+      <li *ngFor="let comm of comments">
+        <div class="comment">
+          <div class="comment-details">
+            <span class="comment-author">{{ comm.username }}</span>
+            <span class="comment-date">{{comm.createdDate }}</span>
+          </div>
+          <p class="comment-body">{{ comm.text }}</p>
+        </div>
+      </li>
+    </ul>
+    <form class="comment-form">
+      <h3>Leave a Comment</h3>
+      <textarea #myTextarea class="form-control" id="exampleFormControlTextarea1" formControlName="text" rows="3"
+        placeholder="Write a large text here ..."></textarea>
+    </form>
+    <button class="btn btn-icon btn-2 btn-primary" type="button" (click)="submitClick(myTextarea.value)">
+      <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
+    </button>
+  </div>
+</div>

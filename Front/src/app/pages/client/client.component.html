@@ -1,0 +1,138 @@
+<!-- <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;"> -->
+<!-- Mask -->
+<!-- <span class="mask bg-gradient-danger opacity-8"></span> -->
+<!-- Header container -->
+
+<div class="container-fluid mt--7" style="  position: relative;top: 4cm;">
+    <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+            <div class="card card-profile shadow">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <a href="javascript:void(0)">
+                                <img [src]="profilePicBase64" class="rounded-circle">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+
+                </div>
+                <div class="card-body pt-0 pt-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3>
+                            {{username}}<span class="font-weight-light">, {{me.age}}</span>
+                        </h3>
+                        <!-- <div class="h5 font-weight-300">
+              <i class="ni location_pin mr-2"></i>Bucharest, Romania
+            </div> -->
+                        <div class="h5 mt-4">
+                            <i class="ni business_briefcase-24 mr-2"></i>Entreprise
+                        </div>
+                        <!-- <div>
+              <i class="ni education_hat mr-2"></i>University of Computer Science
+            </div> -->
+                        <hr class="my-4" />
+                        <p>BIO - {{profile.bio}}</p>
+                    </div>
+                    <div class="postuler-btn">
+                        <a href="#" class="btn">ADD A PROJECT</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-xl-8 order-xl-1">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">My account</h3>
+                        </div>
+                        <div class="col-4 text-right">
+                            <a routerLink="/edit-profile" class="btn btn-sm btn-primary">Edit Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <h6 class="heading-small text-muted mb-4">User information</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Username</label>
+                                        <input type="text" id="input-username"
+                                            class="form-control form-control-alternative" value={{username}}>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-email">Email address</label>
+                                        <input type="email" id="input-email"
+                                            class="form-control form-control-alternative"
+                                            value={{me.email}}>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-first-name">First name</label>
+                                        <input type="text" id="input-first-name"
+                                            class="form-control form-control-alternative"
+                                            value={{me.firstName}}>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Last name</label>
+                                        <input type="text" id="input-last-name"
+                                            class="form-control form-control-alternative"
+                                            value={{me.lastName}}>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+                        <!-- Address -->
+                        <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-address">Address</label>
+                                        <input id="input-address" class="form-control form-control-alternative"
+                                            placeholder="Entreprise Adress"
+                                            value="" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-address">Entreprise</label>
+                                        <input id="input-address" class="form-control form-control-alternative"
+                                            placeholder="Entreprise name"
+                                            value="" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+                       </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-default" role="alert">
+        <strong>Please</strong> complete missing information
+    </div>
+</div>

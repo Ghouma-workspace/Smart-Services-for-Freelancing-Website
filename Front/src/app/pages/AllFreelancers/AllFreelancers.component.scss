@@ -1,0 +1,71 @@
+.freelancers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+        transform: translateY(2cm);
+      }
+  
+  
+  .freelancer {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .freelancer:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .freelancer-info {
+    margin-bottom: 10px;
+  }
+  
+  .freelancer-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .freelancer-domain {
+    margin: 0;
+  }
+  
+  .freelancer-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .rating-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #feca57;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .rating-value {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .freelancer-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .freelancer-button:hover {
+    background-color: #0062cc;
+  }
+

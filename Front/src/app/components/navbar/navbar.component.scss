@@ -1,0 +1,33 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.search-container .search-btn {
+    position: absolute;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #5e72e4;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.search-container .search-btn:hover {
+    background-color: #324cdd;
+}

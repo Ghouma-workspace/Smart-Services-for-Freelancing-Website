@@ -1,0 +1,40 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8" style="height: 500px;">
+</div>
+<div class="floating-div">
+<div class="container"> 
+    <h1>{{project.title}}</h1>
+    <div class="project-details">
+      <div class="project-details-item">
+        <label>Domain:</label>
+        <p>Web Development</p>
+      </div>
+      <div class="project-details-item">
+        <label>Dates:</label>
+        <p>{{project.date}}</p>
+      </div>
+      <div class="project-details-item">
+        <label>Description:</label>
+        <p>{{project.description}}</p>
+      </div>
+      <div class="project-details-item">
+        <label>Payment:</label>
+        <p>{{project.payment}} DT</p>
+      </div>
+      <div class="project-details-item">
+        <label>Status:</label>
+        <div class="status">
+          <label>Current status:</label>
+          <span *ngIf="project.hiring" class="badge badge-success">Hiring</span>
+        </div>
+        
+      </div>
+    </div>
+    <div *ngIf="!isOn" class="postuler-btn">
+      <button type="button" class="btn btn-primary" (click)="postulate()">Postulate</button>
+    </div>
+    <div *ngIf="isOn" class="postuler-btn">
+      <button type="button" class="btn btn-danger">Postulated</button>
+    </div>
+
+</div>
+</div>

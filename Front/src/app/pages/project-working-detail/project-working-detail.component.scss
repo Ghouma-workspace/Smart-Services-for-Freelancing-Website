@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+}
+
+.postuler-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    color: #fff;
+}
+
+
+.project-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-details-item {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.status {
+    margin-top: 20px;
+}
+
+.status label {
+    margin-right: 10px;
+}
+
+.status .badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.status .badge-success {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.status .badge-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.status .badge-danger {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.status .badge-info {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+.floating-div {
+    position: relative;
+    top: -350px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
